@@ -27,7 +27,7 @@ const Features = () => {
         {
           list.map((feature, index)=> {
             // destructure
-            const {image,bgImage,title, description, linkText,delay} = feature;
+            const {image,bgImage,title, description, linkText, href, delay} = feature;
             // feature items
             return (
               <div className='mb-[120px] w-full max-w-[530px] h-[358px] relative flex flex-col items-center justify-center xl:flex-row xl:justify-start mx-auto' key={index}
@@ -50,7 +50,7 @@ const Features = () => {
                   <h3 className='h3 mb-4'>{title}</h3>
                   <p className='font-light italic mb-4'>{description}</p>
                   <div className='flex  items-center gap-x-2 group'>
-                    <a className='text-primary font-bold' href=''>{linkText}</a>
+                    <a className='text-primary font-bold' href={href} target='blank'>{linkText}</a>
                     <BsArrowRight className='text-xl text-accent-primary transition-all  group-hover:ml-[5px]'/>
                   </div>
                 </div>

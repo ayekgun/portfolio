@@ -2,6 +2,7 @@ import React from 'react';
 
 // import Hero data
 import {heroData} from '../data'
+import { Link } from 'react-scroll'
 
 // import components
 import Header from '../components/Header'
@@ -9,7 +10,7 @@ import Header from '../components/Header'
 const Hero = () => {
   // destructure hero data
   const {myName, title, subtitle, btnText, image, id} = heroData
-  return <section className='lg:h-[900px] py-12'>
+  return <section className='xl:h-[900px] py-12'>
     <Header />
     <div className="container mx-auto h-full relative" id={id}>
       <div className='flex flex-col items-center xl:flex-row h-full md:py-24'>
@@ -21,7 +22,17 @@ const Hero = () => {
         {/* {Subtitle} */}
         <p className='text-justify lead xl:max-w-[380px] mb-6 lg:mb-12' data-aos='fade-down' data-aos-delay='500'>{subtitle}</p>                 
         {/* {Button Text} */}
+        <Link
+        to='contact'
+        spy={true}
+        smooth={true}
+        offset={-130}
+        duration={500}
+        delay={200}
+        ignoreCancelEvents={false}
+        >
           <button className='btn3 xl:btn btn-primary mb-8 xl:mb-0' data-aos='fade-down' data-aos-delay='500'>{btnText}</button>
+        </Link>
         {/* {Image} */}
           <div className='xl:absolute xl:-right-16 xl:bottom-16' data-aos='fade-up' data-aos-delay='500' data-aos-offset='-100'>
             <img src={image} alt="" className='mx-auto xl:mx-0' />

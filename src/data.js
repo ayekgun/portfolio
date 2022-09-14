@@ -66,6 +66,7 @@ export const featuresData = {
       description:
         'Simple functional testing with the Robot Framework to select some filter functions and validate that they are displayed correctly.',
       linkText: 'Github link',
+      href: 'https://github.com/ayekgun',
       delay: '400',
     },
     {
@@ -75,6 +76,7 @@ export const featuresData = {
       description:
         'Simple automation testing with the Robot Framework and Appium Library to select some filter functions on our Flutter app.',
       linkText: 'Upload soon',
+      href: '#',
       delay: '700',
     },
     {
@@ -84,6 +86,7 @@ export const featuresData = {
       description:
         'Create a portfolio website using react js and the tailwind CSS framework. .',
       linkText: 'Github link',
+      href: 'https://github.com/ayekgun/portfolio',
       delay: '800',
     },
     {
@@ -93,6 +96,7 @@ export const featuresData = {
       description:
         `Create a simple mobile app using Flutter for the test sample's needs.`,
         linkText: 'Upload soon',
+        href: '#',
       delay: '900',
     },
   ],
