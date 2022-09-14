@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link } from 'react-scroll'
 
 // import navigation data
 import { navigationData } from '../data';
@@ -8,7 +8,7 @@ import { navigationData } from '../data';
 const Nav = () => {
   return (
     <nav>
-      <ul className='flex gap-x-8'>
+      <ul className='flex gap-x-8 hover:cursor-pointer'>
       {
         navigationData.map((item, index)=> {
           return (
@@ -25,7 +25,7 @@ const Nav = () => {
           )
         })
       }
-    </ul>
+      </ul>
     </nav> 
   );
 };

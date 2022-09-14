@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-scroll'
 
 // import contact data
 import { contactData } from '../data';
@@ -14,12 +15,22 @@ const Footer = ()=> {
         data-aos-delay='200'
         data-aos-offset='-100'
         >
-          <div className='hidden xl:block xl:max-w-[220px] order-3'
+          <div className='hidden xl:block xl:max-w-[220px] order-3 hover:cursor-pointer'
           data-aos='fade-down'
           data-aos-delay='300'
           data-aos-offset='-100'
           >
-            <img src={logo} alt="" />
+            <Link 
+            to='hero'
+            spy={true}
+            smooth={true}
+            offset={-130}
+            duration={500}
+            delay={200}
+            ignoreCancelEvents={false}
+            >
+              <img src={logo} alt="" />
+            </Link>
           </div>
           <div className='xl:hidden flex justify-center items-center gap-x-8 scale-150 mb-4'>
             {

@@ -9,6 +9,9 @@ import NavMobile from  './NavMobile'
 import { FaBars } from 'react-icons/fa';
 import { BsArrowRight } from 'react-icons/bs';
 
+// import cv
+import CV from '../assets/cv.pdf';
+
 const Header = () => {
   const [navMobile, setNavMobile] = useState(false);
   return (
@@ -33,9 +36,11 @@ const Header = () => {
             <NavMobile />
           </div>
           {/* button request demo */}
-          <button className='btn btn-quaternary flex items-center gap-x-[20px] group'>
-            Download CV <BsArrowRight className=' text-2xl text-accent-primary group-hover:text-white transition'/>
-          </button>
+          <a href={CV} download='CV - Arif Gunawan.pdf'>
+            <button className='btn btn-quaternary flex items-center gap-x-[20px] group'>
+              Download CV <BsArrowRight className=' text-2xl text-accent-primary group-hover:text-white transition'/>
+            </button>
+          </a>
           {/* hamburger nav btn / only shows on mobile screens */}
           <div onClick={()=> setNavMobile(!navMobile)}
           className="lg:hidden text-2xl text-primary cursor-pointer">
