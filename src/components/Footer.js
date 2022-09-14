@@ -1,15 +1,13 @@
-import React, {forwardRef, useRef} from 'react';
+import React from 'react';
 
 // import contact data
 import { contactData } from '../data';
 
-const Footer = forwardRef((props, ref) => {
+const Footer = ()=> {
   // const apaaja = useRef(null);
   const{footerText,logo,sosmed} = contactData
   return (
-    <section className='mt-[120px] pb-2 xl:mt-[220px] xl:pb-10'
-    ref={ref}
-    >
+    <section className='mt-[120px] pb-2 xl:mt-[220px] xl:pb-10'>
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row justify-between xl:items-center gap-4 xl:gap-8"
         data-aos='fade-up'
@@ -51,6 +49,6 @@ const Footer = forwardRef((props, ref) => {
       </div>
     </section>
   );
-});
+};
 
 export default Footer;

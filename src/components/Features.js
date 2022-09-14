@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react';
+import React from 'react';
 
 // import features data
 import { featuresData } from '../data';
@@ -6,12 +6,11 @@ import { featuresData } from '../data';
 // import icons
 import {BsArrowRight} from 'react-icons/bs';
 
-const Features = forwardRef((props, ref) => {
+const Features = () => {
   // destructure features data 
-  const {title, subtitle, list} = featuresData;
-  return (<section className='my-[70px] xl:my-[150px]'
-  ref={ref}>
-    <div className="container mx-auto">
+  const {title, subtitle, list, id} = featuresData;
+  return (<section className='mt-[120px] xl:my-[150px]'>
+    <div className="container mx-auto" id={id}>
       {/* text */}
       <div className='text-center'>
         <h1 className='h2 mb-6 xl:mb-12'
@@ -62,6 +61,6 @@ const Features = forwardRef((props, ref) => {
       </div>
     </div>
   </section>);
-});
+};
 
 export default Features;

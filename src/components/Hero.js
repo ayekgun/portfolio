@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react';
+import React from 'react';
 
 // import Hero data
 import {heroData} from '../data'
@@ -6,12 +6,12 @@ import {heroData} from '../data'
 // import components
 import Header from '../components/Header'
 
-const Hero = forwardRef((props, ref) => {
+const Hero = () => {
   // destructure hero data
-  const {myName, title, subtitle, btnText, image} = heroData
-  return <section className='lg:h-[900px] py-12' ref={ref}>
+  const {myName, title, subtitle, btnText, image, id} = heroData
+  return <section className='lg:h-[900px] py-12'>
     <Header />
-    <div className="container mx-auto h-full relative">
+    <div className="container mx-auto h-full relative" id={id}>
       <div className='flex flex-col items-center xl:flex-row h-full md:py-24'>
         <div className='text-center xl:text-left mt-12'>
         {/* Text */}    
@@ -30,6 +30,6 @@ const Hero = forwardRef((props, ref) => {
       </div>
     </div>
   </section>;
-});
+};
 
 export default Hero;

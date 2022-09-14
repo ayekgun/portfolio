@@ -19,23 +19,24 @@ import Logo from '../src/assets/img/logo-2.png';
 export const navigationData = [
   {
     name: 'Home',
-    href: '/hero',
+    href: 'hero',
   },
   {
     name: 'About',
-    href: '/about',
+    href: 'about',
   },
   {
     name: 'Portfolio',
-    href: '/features',
+    href: 'features',
   },
   {
     name: 'Contact',
-    href: '/contact',
+    href: 'contact',
   },
 ];
 
 export const heroData = {
+  id:'hero',
   myName: `Arif Gunawan`,
   title: ` Software Quality Assurance.`,
   subtitle:
@@ -52,6 +53,7 @@ export const aboutData = {
 };
 
 export const featuresData = {
+  id:'features',
   title: 'Portfolio',
   subtitle:
     `Some of the features and projects that i provide for those of you who 
@@ -97,6 +99,7 @@ export const featuresData = {
 };
 
 export const contactData = {
+  id: 'contact',
   title: 'Contact me',
   title2: 'Send me a message',
   subtitle: 'You can send me an email and contact me on the social media links below or whatsapp number for a quick response.',

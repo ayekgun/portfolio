@@ -1,4 +1,4 @@
-import React, { useRef, forwardRef } from 'react';
+import React, {useRef} from 'react';
 
 // import emailJs
 import emailjs from '@emailjs/browser';
@@ -6,8 +6,8 @@ import emailjs from '@emailjs/browser';
 // import data contact
 import { contactData } from '../data';
 
-const Contact = forwardRef((props, ref) => {
-  const {title, title2, subtitle, sosmed, btn, btnIcon} = contactData
+const Contact = ()=> {
+  const {title, title2, subtitle, sosmed, btn, btnIcon, id} = contactData
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -22,14 +22,14 @@ const Contact = forwardRef((props, ref) => {
   };
 
   return (
-    <section className='my-[30px] xl:mt-[30px]' ref={ref}>
+    <section className='my-[30px] xl:mt-[30px]'>
       <div className=' mb-8 xl:mb-[80px]' 
       data-aos='fade-down'
       data-aos-delay='100'
       >
         <h1 className='h2 text-center'>{title}</h1>
       </div>
-      <div className="container mx-auto">
+      <div className="container mx-auto" id={id}>
         <div className="bg-tertiary/10 rounded-xl xl:rounded-[50px] min-h-[460px] px-2 xl:px-12 pb-12 grid  grid-cols-1 xl:grid-cols-2 xl:grid-rows-2 gap-4 item-center justify-between 
         py-[50px] static"
         data-aos='fade-up'
@@ -100,6 +100,6 @@ const Contact = forwardRef((props, ref) => {
       </div>
     </section>
   );
-});
+};
 
 export default Contact;

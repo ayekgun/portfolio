@@ -1,18 +1,17 @@
-import React, {forwardRef} from 'react';
+import React from 'react';
 
 
 // import about data
 import { aboutData } from '../data';
 
-const About = forwardRef((props, ref) => {
+const About = ()=> {
   const {image, title, subtitle}= aboutData;
   return (
     <section className='my-[30px] xl:mt-[50px]' 
     data-aos='fade-up'
     data-aos-offset='250'
-    ref={ref}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto" id='about' >
         <div className='bg-tertiary/10 rounded-[50px] min-h-[560px] px-12 pb-12 flex flex-col xl:flex-row xl:items-center xl:text-left xl:gap-[60px] xl:pb-0'>
           {/* image */}
           <div className='flex-1 pt-10'>
@@ -28,7 +27,7 @@ const About = forwardRef((props, ref) => {
       </div>
     </section>
   );
-});
+};
 
 export default About;
 // export {linkRef};

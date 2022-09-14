@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 // import navigation data
 import { navigationData } from '../data';
 
@@ -11,7 +13,14 @@ const Nav = () => {
         navigationData.map((item, index)=> {
           return (
             <li key={index}>
-              <a href={item.href}>{item.name}</a>
+              <Link to={item.href}
+              spy={true}
+              smooth={true}
+              offset={-130}
+              duration={500}
+              delay={200}
+              ignoreCancelEvents={false}
+              >{item.name}</Link>
             </li>
           )
         })

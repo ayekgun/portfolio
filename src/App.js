@@ -13,26 +13,7 @@ import Features from './components/Features';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-const App = ({ refs }) => {
-
-  const homeRef = useRef(null);
-  const heroRef = useRef(null);
-  const aboutRef = useRef(null);
-  const featuresRef = useRef(null);
-  const contactRef = useRef(null);
-  const footerRef = useRef(null);
-  const apaaja = useRef(null);
-
-  const mudun = (ref)=> {
-    console.log('opo isine?',ref)
-    window.scrollTo({
-      top: ref.offsetTop,
-      left: 0,
-      behavior: 'smooth'
-    })
-  }
-
-  
+const App = () => {
 
   // aos initialization
   Aos.init({
@@ -40,39 +21,13 @@ const App = ({ refs }) => {
   })
   
   return (
-    <Fragment>
-      <div onClick={()=> {mudun(apaaja.current)}}
-      className='z-50 absolute'
-      >
-        <button className='h-15 w-15 bg-red font-bold text-3xl'>
-          click me
-        </button>
-      </div>
-
-      <div ref={homeRef} className="App">
-        <HashRouter className='overflow-hidden'>
-          <Hero refs={{ homeRef, heroRef, aboutRef, featuresRef, contactRef, footerRef }}/>
-          <About ref={aboutRef}/>
-          <Features ref={featuresRef}/>
-          <Contact ref={contactRef}/>
-          <Footer ref={footerRef}/>
-        </HashRouter> 
-      </div>
-      <div className='font-bold text-3xl'>
-        <h1 ref={apaaja}>apa aja</h1>
-      </div>
-
-      {/* <BrowserRouter>
-        <Routes>
-          <Route path='/' element={[h,a]}/>
-          <Route path='/hero' element={<Hero />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/features' element={<Features />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/footer' element={<Footer />} />
-        </Routes>
-      </BrowserRouter>                             */}
-    </Fragment>
+    <div className='overflow-hidden'>
+      <Hero />
+      <About />
+      <Features />
+      <Contact />
+      <Footer />
+    </div>
   );
 };
 
