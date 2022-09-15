@@ -10,7 +10,7 @@ import { FaBars } from 'react-icons/fa';
 import { BsArrowRight } from 'react-icons/bs';
 
 // import cv
-import CV from '../assets/cv.pdf';
+import CV from '../assets/CV-Arif-Gunawan.pdf';
 
 const Header = () => {
   const [navMobile, setNavMobile] = useState(false);

@@ -6,9 +6,17 @@ import emailjs from '@emailjs/browser';
 // import data contact
 import { contactData } from '../data';
 
+// import icon email
+import { MdEmail } from "react-icons/md";
+
 const Contact = ()=> {
   const {title, title2, subtitle, sosmed, btn, btnIcon, id} = contactData
   const form = useRef();
+  const mail = useRef();
+  const goto = (mail)=> {
+    mail.current.focus()
+  }
+  
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -57,6 +65,10 @@ const Contact = ()=> {
           data-aos-delay='700'
           >
             <div>
+              <div onClick={()=>goto(mail)}  className='flex gap-x-8 group hover:cursor-pointer'>
+                <div className='mb-[20px] group-hover:animate-bounce duration-500 delay-300 transition-all'><MdEmail size={25}/></div>
+                <h1 className='font-medium text-center'>arifgunawan.professional@gmail.com</h1>
+              </div>
               {
                 sosmed.map((contact, index)=> {
                   const {icon, text, href} = contact;
@@ -79,7 +91,7 @@ const Contact = ()=> {
               {/* name */}
               <div className='bg-blend-saturation'>
                 <label  className='text-sm' htmlFor="">Your name</label>
-                <input type="text" name='name' className='ring-1 ring-gray-300 w-full rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-teal-300' />
+                <input ref={mail} type="text" name='name' className='ring-1 ring-gray-300 w-full rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-teal-300' />
               </div>
               {/* email address */}
               <div>

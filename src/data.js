@@ -1,7 +1,6 @@
 // import icons
 import { FaGithub, FaLinkedin, FaTelegramPlane } from 'react-icons/fa';
 import { IoLogoWhatsapp } from "react-icons/io"
-import { MdEmail } from "react-icons/md";
 
 // import images
 import AboutImg from '../src/assets/img/about-2.png';
@@ -109,13 +108,8 @@ export const contactData = {
   subtitle: 'You can send me an email and contact me on the social media links below or whatsapp number for a quick response.',
   sosmed : [
     {
-      icon: <MdEmail size={25}/>,
-      href: '#',
-      text: 'arifgunawan.professional@gmail.com'
-    },
-    {
       icon: <IoLogoWhatsapp size={25}/>,
-      href: 'https://wa.me/+6282229710709',
+      href: 'https://wa.me/+6282229720709',
       text: '(+62) 822-2972-0709',
     },
     {
