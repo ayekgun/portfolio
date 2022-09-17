@@ -65,7 +65,7 @@ export const featuresData = {
       description:
         'Simple functional testing with the Robot Framework to select some filter functions and validate that they are displayed correctly.',
       linkText: 'Github link',
-      href: 'https://github.com/ayekgun',
+      href: 'https://github.com/ayekgun/robotframework-testing',
       delay: '400',
     },
     {

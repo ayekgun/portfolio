@@ -15,7 +15,7 @@ import CV from '../assets/CV-Arif-Gunawan.pdf';
 const Header = () => {
   const [navMobile, setNavMobile] = useState(false);
   return (
-    <header className='mb-12 lg:mb-0 z-20 relative px-4 lg:px-0'
+    <header className='mb-12 lg:mb-0 z-20 px-4 lg:px-0 relative'
     data-aos='fade-down'
     data-aos-delay='1200'
     data-aos-duration='1000'> 
@@ -23,9 +23,9 @@ const Header = () => {
         <div className='flex items-center justify-between relative'>
           <div className='flex items-center gap-x-[110px]'>
             {/* {Logo} */}
-            <a href='#' >
+            <div>
               <img src={Logo} alt="" />
-            </a>
+            </div>
             {/* nav - initially is hidden / show on large screen */}
             <div className='hidden lg:flex'> 
               <Nav />
